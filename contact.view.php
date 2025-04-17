@@ -23,14 +23,14 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
 
-            <a href="/laracast-PHP/" 
+            <a href="/Laracast-PHP/" 
             class="
             rounded-md 
             text-gray-300
             px-3 py-2 text-sm font-medium
             hover:bg-gray-700 hover:text-white
             " aria-current="page">Home</a>
-            <a href="/laracast-PHP/about.php" 
+            <a href="/Laracast-PHP/about.php" 
             class="
              rounded-md 
             text-gray-300
@@ -38,7 +38,7 @@
             hover:bg-gray-700 hover:text-white
             
             ">About</a>
-            <a href="/laracast-PHP/contact.php" class="
+            <a href="/Laracast-PHP/contact.php" class="
             rounded-md 
             text-white
             bg-gray-900 
