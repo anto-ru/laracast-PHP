@@ -8,27 +8,52 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-               
+              
+
+
+              
+              <!-- utilizzo di OPERATORE TERNARIO con ciclo condizionale if -->
+              <!-- versione estesa -->
+              
+              <?php /*
+              if ($_SERVER['REQUEST_URI'] === '/Laracast-PHP/') {
+                echo 'bg-gray-900 text-white'; 
+              } 
+                else {
+                  echo 'text-gray-300';
+                  }
+                  /*
+              ?>
+              
+              <!-- utilizzo di operatore ternario -->
+              <?php /* echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/') ? 'bg-gray-900 text-white' : 'text-gray-300' */;?>
+
               <a href="/Laracast-PHP/" 
               class="
-              bg-gray-900 text-white
+              
+              <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>;
+              text-gray-300 hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium 
               " 
-              aria-current="page"
+              <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/' ? 'aria-current="page"' : ''; ?>
               >Home</a>
               
               <a href="/Laracast-PHP/about.php" 
               class="
+               <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/about.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
               text-gray-300 hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium 
               "
+              <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/about.php' ? 'aria-current="page"' : ''; ?>
               >About</a>
               
               <a href="/Laracast-PHP/contact.php" 
               class="
+              <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/contact.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
               text-gray-300 hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium
               "
+              <?php echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/contact.php' ? 'aria-current="page"' : ''; ?>
               >Contact</a>
 
            
