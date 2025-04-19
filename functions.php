@@ -22,7 +22,7 @@ function dd($value){
     var_dump($value);
     echo "</pre>";
 
-    // die(); 
+    die(); 
     // termina l'esecuzione dello script e mostra il messaggio di debug, quindi non esegue tutto cioò che viene dopo.
 }
 
