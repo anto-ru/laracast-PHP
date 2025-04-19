@@ -1,9 +1,26 @@
+
 <?php
-require 'functions.php'; // include il file functions.php, che contiene le funzioni definite in esso, come dd() e altre funzioni utili.
 
-$heading = 'Home'; /* Ogni variabile definita nel controllore è accessibile nella view */
+// echo 'bob';
 
-require "views/index.view.php";
+require 'functions.php'; 
+
+$uri = $_SERVER['REQUEST_URI'];
+
+// dd($_SERVER);
+
+
+if ($uri === '/Laracast-PHP/'){
+    require 'controllers/index.php';
+    } 
+    else if ($uri === '/Laracast-PHP/about'){
+        require 'controllers/about.php';
+    } 
+    else if ($uri === '/Laracast-PHP/contact'){
+        require 'controllers/contact.php';
+    };
+
+
 
 
 

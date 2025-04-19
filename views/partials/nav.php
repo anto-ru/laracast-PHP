@@ -8,62 +8,33 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              
-
-
-
-              
-              <!-- utilizzo di OPERATORE TERNARIO con ciclo condizionale if -->
-              <!-- questa è la versione estesa senza operatore ternario-->
-              <?php
-               /*
-              if ($_SERVER['REQUEST_URI'] === '/Laracast-PHP/') {
-                echo 'bg-gray-900 text-white'; 
-              } 
-                else {
-                  echo 'text-gray-300';
-                  }
-              */    
-              ?>
-              
-              <!-- utilizzo di operatore ternario -->
-              <?php
-              /* echo $_SERVER['REQUEST_URI'] === '/Laracast-PHP/') ? 'bg-gray-900 text-white' : 'text-gray-300';  
-              */
-              ?>
-              
-              <!-- Esiste una variante, posso usare la versione compatta di echo che è -->
-              <?php
-              /* 
-              <?= ...contenuto della stringa precendente... ?>
-              */
-              ?>
+         
 
               <a href="/Laracast-PHP/" 
               class="              
-              <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>;
-              text-gray-300 hover:bg-gray-700 hover:text-white
+              <?= urlIs('/Laracast-PHP/') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>;
+              hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium 
               " 
-              <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/' ? 'aria-current="page"' : ''; ?>
+              <?= urlIs('/Laracast-PHP/') ? 'aria-current="page"' : ''; ?>
               >Home</a>
               
-              <a href="/Laracast-PHP/about.php" 
+              <a href="/Laracast-PHP/about" 
               class="
-               <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/about.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
-              text-gray-300 hover:bg-gray-700 hover:text-white
+              <?= urlIs('/Laracast-PHP/about') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
+              hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium 
               "
-              <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/about.php' ? 'aria-current="page"' : ''; ?>
+              <?= urlIs('/Laracast-PHP/about') ? 'aria-current="page"' : ''; ?>
               >About</a>
               
-              <a href="/Laracast-PHP/contact.php" 
+              <a href="/Laracast-PHP/contact"
               class="
-              <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/contact.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
-              text-gray-300 hover:bg-gray-700 hover:text-white
+              <?= urlIs('/Laracast-PHP/contact') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?>
+              hover:bg-gray-700 hover:text-white
               rounded-md px-3 py-2 text-sm font-medium
               "
-              <?= $_SERVER['REQUEST_URI'] === '/Laracast-PHP/contact.php' ? 'aria-current="page"' : ''; ?>
+              <?= urlIs('/Laracast-PHP/contact') ? 'aria-current="page"' : ''; ?>
               >Contact</a>
 
            
